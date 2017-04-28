@@ -1,3 +1,4 @@
+//imports
 import java.util.Map;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -5,9 +6,11 @@ import spark.ModelAndView;
 import spark.template.velocity.VelocityTemplateEngine;
 import static spark.Spark.*;
 
+//to enhance access to public folder
 public class App {
   public static void main(String[] args) {
     staticFileLocation("/public");
+    // to enhance routing from layout.vtl which has the layout structure of the project
     String layout = "templates/layout.vtl";
     ProcessBuilder process = new ProcessBuilder();
      Integer port;
